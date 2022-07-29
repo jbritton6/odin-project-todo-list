@@ -1,4 +1,5 @@
 import {createBoard} from './board.js';
+import './styles/styles.css'
 
 
 main();
