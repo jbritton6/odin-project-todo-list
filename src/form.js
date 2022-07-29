@@ -1,4 +1,13 @@
-function form() {
+import './styles/styles.css';
+
+
+function addForm() {
+    const newNoteColumn = document.querySelector('.new-note');
+    newNoteColumn.append(createForm());
+}
+
+
+function createForm() {
     const form = document.createElement('div');
     form.classList.add('form');
 
@@ -6,4 +15,4 @@ function form() {
 }
 
 
-export {form};
+export {addForm};
