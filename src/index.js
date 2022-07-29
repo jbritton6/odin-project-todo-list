@@ -1,4 +1,4 @@
-import {createBoard} from './board.js';
+import {createBoard, addForm} from './board.js';
 import './styles/styles.css'
 
 
@@ -9,4 +9,6 @@ function main() {
     const content = document.querySelector('div#content');
 
     content.appendChild(createBoard());
+
+    addForm();
 }

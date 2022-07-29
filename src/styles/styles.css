@@ -24,3 +24,9 @@ body {
     border: 2px solid black;
     width: 200px;
 }
+
+.form {
+    background-color: pink;
+    height: 300px;
+    width: 225px;
+}

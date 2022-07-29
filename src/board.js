@@ -1,4 +1,5 @@
-import './styles/styles.css'
+import {form} from './form.js';
+import './styles/styles.css';
 
 
 function createBoard() {
@@ -16,6 +17,12 @@ function createBoard() {
 }
 
 
+function addForm() {
+    const newNoteColumn = document.querySelector('.new-note');
+    newNoteColumn.append(form());
+}
+
+
 function createColumn(className) {
     const column = document.createElement('div');
     column.classList.add(className);
@@ -24,4 +31,4 @@ function createColumn(className) {
 }
 
 
-export {createBoard};
+export {createBoard, addForm};
