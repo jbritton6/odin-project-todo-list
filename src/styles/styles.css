@@ -12,5 +12,15 @@ body {
 
 .new-note {
     background-color: blue;
-    width: 50px;
+    width: 250px;
+}
+
+.column-0,
+.column-1,
+.column-2,
+.column-3,
+.column-4 {
+    background-color: green;
+    border: 2px solid black;
+    width: 200px;
 }
