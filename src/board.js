@@ -1,12 +1,22 @@
 import './styles/styles.css'
 
 
-function board() {
-    const element = document.createElement('div');
-    element.classList.add('board');
+function createBoard() {
+    const board = document.createElement('div');
 
-    return element;
+    board.appendChild(createColumn('new-note'));
+    board.classList.add('board');
+
+    return board;
 }
 
 
-export {board};
+function createColumn(className) {
+    const column = document.createElement('div');
+    column.classList.add(className);
+
+    return column;
+}
+
+
+export {createBoard};

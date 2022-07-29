@@ -1,4 +1,4 @@
-import {board} from './board.js';
+import {createBoard} from './board.js';
 
 
 main();
@@ -7,5 +7,5 @@ main();
 function main() {
     const content = document.querySelector('div#content');
 
-    content.appendChild(board());
+    content.appendChild(createBoard());
 }
