@@ -15,8 +15,27 @@ function createForm() {
     title.textContent = 'New todo';
 
     form.appendChild(title);
+    form.appendChild(createTitle());
 
     return form;
+}
+
+
+function createTitle() {
+    const titleLabel = document.createElement('label');
+    titleLabel.setAttribute('for', 'title');
+    titleLabel.textContent = 'Title:';
+
+    const titleInput = document.createElement('input');
+    titleInput.setAttribute('type', 'text');
+    titleInput.setAttribute('required', 'required');
+
+    const container = document.createElement('div');
+    container.classList.add('form-element');
+    container.appendChild(titleLabel);
+    container.appendChild(titleInput);
+
+    return container;
 }
 
 
