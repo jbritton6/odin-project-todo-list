@@ -11,6 +11,11 @@ function createForm() {
     const form = document.createElement('div');
     form.classList.add('form');
 
+    const title = document.createElement('p');
+    title.textContent = 'New todo';
+
+    form.appendChild(title);
+
     return form;
 }
 
