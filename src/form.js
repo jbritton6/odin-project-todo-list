@@ -15,29 +15,32 @@ function createForm() {
     title.textContent = 'New todo';
 
     form.appendChild(title);
-    form.appendChild(createTitle());
+    form.appendChild(createName());
 
     return form;
 }
 
 
-function createTitle() {
-    const titleLabel = document.createElement('label');
-    titleLabel.classList.add('form-title');
-    titleLabel.setAttribute('for', 'title');
-    titleLabel.textContent = 'Title:';
+function createName() {
+    const nameLabel = document.createElement('label');
+    nameLabel.classList.add('form-title');
+    nameLabel.setAttribute('for', 'title');
+    nameLabel.textContent = 'Title:';
 
-    const titleInput = document.createElement('input');
-    titleInput.setAttribute('type', 'text');
-    titleInput.setAttribute('required', 'required');
+    const nameInput = document.createElement('input');
+    nameInput.setAttribute('type', 'text');
+    nameInput.setAttribute('required', 'required');
 
     const container = document.createElement('div');
     container.classList.add('form-element');
-    container.appendChild(titleLabel);
-    container.appendChild(titleInput);
+    container.appendChild(nameLabel);
+    container.appendChild(nameInput);
 
     return container;
 }
+
+
+
 
 
 export {addForm};
