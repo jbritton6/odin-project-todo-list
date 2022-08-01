@@ -16,6 +16,7 @@ function createForm() {
 
     form.appendChild(title);
     form.appendChild(createName());
+    form.appendChild(createDescription());
 
     return form;
 }
@@ -40,7 +41,22 @@ function createName() {
 }
 
 
+function createDescription() {
+    const descriptionLabel = document.createElement('label');
+    descriptionLabel.classList.add('form-label');
+    descriptionLabel.setAttribute('for', 'description');
+    descriptionLabel.textContent = 'Description';
 
+    const descriptionInput = document.createElement('textarea');
+    descriptionInput.setAttribute('required', 'required');
+
+    const container = document.createElement('div');
+    container.classList.add('form-element');
+    container.appendChild(descriptionLabel);
+    container.appendChild(descriptionInput);
+
+    return container;
+}
 
 
 export {addForm};
