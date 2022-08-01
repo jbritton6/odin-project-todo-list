@@ -63,7 +63,7 @@ function createDescription() {
 
 
 function createDueDate() {
-    const dueDateLabel = document.createElement('lable');
+    const dueDateLabel = document.createElement('label');
     dueDateLabel.classList.add('form-label');
     dueDateLabel.setAttribute('for', 'due-date');
     dueDateLabel.textContent = 'Due Date';
@@ -79,6 +79,11 @@ function createDueDate() {
     container.appendChild(dueDateInput);
 
     return container;
+}
+
+
+function createProjectName() {
+    const projectNameLabel = document.createElement('label')
 }
 
 
