@@ -23,6 +23,7 @@ function createForm() {
 
 function createTitle() {
     const titleLabel = document.createElement('label');
+    titleLabel.classList.add('form-title');
     titleLabel.setAttribute('for', 'title');
     titleLabel.textContent = 'Title:';
 
