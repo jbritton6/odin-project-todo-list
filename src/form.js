@@ -18,6 +18,7 @@ function createForm() {
     form.appendChild(createName());
     form.appendChild(createDescription());
     form.appendChild(createDueDate());
+    form.appendChild(createProjectName());
 
     return form;
 }
@@ -83,7 +84,22 @@ function createDueDate() {
 
 
 function createProjectName() {
-    const projectNameLabel = document.createElement('label')
+    const projectNameLabel = document.createElement('label');
+    projectNameLabel.classList.add('form-label');
+    projectNameLabel.setAttribute('for', 'project-name');
+    projectNameLabel.textContent = 'Project';
+
+    const projectNameInput = document.createElement('input');
+    projectNameInput.setAttribute('id', 'project-name');
+    projectNameInput.setAttribute('type', 'text');
+    projectNameInput.setAttribute('required', 'required');
+
+    const container = document.createElement('div');
+    container.classList.add('form-element');
+    container.appendChild(projectNameLabel);
+    container.appendChild(projectNameInput);
+
+    return container;
 }
 
 
