@@ -25,10 +25,11 @@ function createForm() {
 function createName() {
     const nameLabel = document.createElement('label');
     nameLabel.classList.add('form-label');
-    nameLabel.setAttribute('for', 'title');
-    nameLabel.textContent = 'Title:';
+    nameLabel.setAttribute('for', 'name');
+    nameLabel.textContent = 'Todo:';
 
     const nameInput = document.createElement('input');
+    nameInput.setAttribute('id', 'name')
     nameInput.setAttribute('type', 'text');
     nameInput.setAttribute('required', 'required');
 
@@ -48,6 +49,7 @@ function createDescription() {
     descriptionLabel.textContent = 'Description';
 
     const descriptionInput = document.createElement('textarea');
+    descriptionInput.setAttribute('id', 'description');
     descriptionInput.setAttribute('required', 'required');
 
     const container = document.createElement('div');
