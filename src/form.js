@@ -24,7 +24,7 @@ function createForm() {
 
 function createName() {
     const nameLabel = document.createElement('label');
-    nameLabel.classList.add('form-title');
+    nameLabel.classList.add('form-label');
     nameLabel.setAttribute('for', 'title');
     nameLabel.textContent = 'Title:';
 
