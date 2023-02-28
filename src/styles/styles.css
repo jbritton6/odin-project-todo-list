@@ -12,10 +12,16 @@ body {
 
 .main-container {
     background-color: blue;
+    display: flex;
     flex: 1;
 }
 
 .header {
     background-color: red;
     height: 100px;
+}
+
+.sidebar {
+    background-color: green;
+    width: 300px;
 }
