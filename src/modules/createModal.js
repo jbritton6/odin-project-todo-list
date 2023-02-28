@@ -24,12 +24,29 @@ function createFormTextInput(labelTitle, identifier) {
     return container;
 }
 
+function createDateInput(labelTitle, identifier) {
+    const label = document.createElement('label');
+    label.setAttribute('for', identifier);
+    label.textContent = labelTitle;
+
+    const input = document.createElement('input');
+    input.setAttribute('type', 'date');
+    input.setAttribute('id', identifier);
+    input.setAttribute('name', identifier);
+
+    const container = document.createElement('div');
+    container.appendChild(label);
+    container.appendChild(input);
+
+    return container;
+}
 
 function createModalForm() {
     const form = document.createElement('form');
 
     form.appendChild(createFormTextInput('Title:', 'title'));
     form.appendChild(createFormTextInput('Project:', 'project'));
+    form.appendChild(createDateInput('Due date:', 'due-date'))
 
     return form;
 }
