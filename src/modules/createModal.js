@@ -7,20 +7,28 @@ function createModalBackground() {
     return modalBackground;
 }
 
+function createFormTextInput(labelTitle, identifier) {
+    const label = document.createElement('label');
+    label.setAttribute('for', identifier);
+    label.textContent = labelTitle;
+
+    const input = document.createElement('input');
+    input.setAttribute('type', 'text');
+    input.setAttribute('id', identifier);
+    input.setAttribute('name', identifier);
+
+    const container = document.createElement('div');
+    container.appendChild(label);
+    container.appendChild(input);
+
+    return container;
+}
+
 
 function createModalForm() {
     const form = document.createElement('form');
 
-    const title = document.createElement('label');
-    title.setAttribute('for', 'title');
-    title.textContent = 'Title:';
-    const input = document.createElement('input');
-    input.setAttribute('type', 'text');
-    input.setAttribute('id', 'title');
-    input.setAttribute('name', 'title');
-
-    form.appendChild(title);
-    form.appendChild(input);
+    form.appendChild(createFormTextInput('Title:', 'title'));
 
     return form;
 }
