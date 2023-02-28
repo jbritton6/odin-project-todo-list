@@ -7,7 +7,7 @@ function createModalBackground() {
     return modalBackground;
 }
 
-function createFormTextInput(labelTitle, identifier) {
+function createTextInput(labelTitle, identifier) {
     const label = document.createElement('label');
     label.setAttribute('for', identifier);
     label.textContent = labelTitle;
@@ -44,8 +44,8 @@ function createDateInput(labelTitle, identifier) {
 function createModalForm() {
     const form = document.createElement('form');
 
-    form.appendChild(createFormTextInput('Title:', 'title'));
-    form.appendChild(createFormTextInput('Project:', 'project'));
+    form.appendChild(createTextInput('Title:', 'title'));
+    form.appendChild(createTextInput('Project:', 'project'));
     form.appendChild(createDateInput('Due date:', 'due-date'))
 
     return form;
