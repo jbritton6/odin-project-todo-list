@@ -10,6 +10,11 @@ body {
     width: 100vw;
 }
 
+.add-todo-button {
+    background-color: pink;
+    margin-left: auto;
+}
+
 .main-container {
     background-color: blue;
     display: flex;
