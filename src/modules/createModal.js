@@ -29,6 +29,7 @@ function createModalForm() {
     const form = document.createElement('form');
 
     form.appendChild(createFormTextInput('Title:', 'title'));
+    form.appendChild(createFormTextInput('Project:', 'project'));
 
     return form;
 }
