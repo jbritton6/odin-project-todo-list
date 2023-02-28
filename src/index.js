@@ -1,5 +1,5 @@
-import { createHeader } from './modules/header.js';
-import { createBody } from './modules/body.js';
+import { createHeader } from './modules/createHeader.js';
+import { createMainContainer } from './modules/createMainContainer.js';
 
 document.body.appendChild(createHeader());
-document.body.appendChild(createBody());
+document.body.appendChild(createMainContainer());

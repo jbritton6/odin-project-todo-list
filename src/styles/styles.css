@@ -10,7 +10,7 @@ body {
     width: 100vw;
 }
 
-.body {
+.main-container {
     background-color: blue;
     flex: 1;
 }
