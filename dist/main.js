@@ -370,7 +370,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "* {\n    margin: 0;\n    padding: 0;\n}\n\nbody {\n    display: flex;\n    flex-direction: column;\n    height: 100vh;\n    width: 100vw;\n}\n\n.main-container {\n    background-color: blue;\n    display: flex;\n    flex: 1;\n}\n\n.header {\n    background-color: red;\n    height: 100px;\n}\n\n.sidebar {\n    background-color: green;\n    width: 300px;\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "* {\n    margin: 0;\n    padding: 0;\n}\n\nbody {\n    display: flex;\n    flex-direction: column;\n    height: 100vh;\n    width: 100vw;\n}\n\n.main-container {\n    background-color: blue;\n    display: flex;\n    flex: 1;\n}\n\n.header {\n    background-color: red;\n    height: 100px;\n}\n\n.sidebar {\n    background-color: green;\n    width: 300px;\n}\n\n.todo-list {\n    background-color: orange;\n    flex: 1;\n    margin: 25px;\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -515,6 +515,26 @@ function createSidebar() {
 
 
 
+/***/ }),
+/* 14 */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "createTodoList": () => (/* binding */ createTodoList)
+/* harmony export */ });
+/* harmony import */ var _styles_styles_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(2);
+
+
+function createTodoList() {
+    const todoList = document.createElement('div');
+    todoList.classList.add('todo-list');
+
+    return todoList;
+}
+
+
+
 /***/ })
 /******/ 	]);
 /************************************************************************/
@@ -596,6 +616,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_createHeader_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
 /* harmony import */ var _modules_createMainContainer_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(12);
 /* harmony import */ var _modules_createSidebar_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(13);
+/* harmony import */ var _modules_createTodoList_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(14);
+
 
 
 
@@ -604,8 +626,10 @@ __webpack_require__.r(__webpack_exports__);
 const header = (0,_modules_createHeader_js__WEBPACK_IMPORTED_MODULE_0__.createHeader)();
 const mainContainer = (0,_modules_createMainContainer_js__WEBPACK_IMPORTED_MODULE_1__.createMainContainer)();
 const sidebar = (0,_modules_createSidebar_js__WEBPACK_IMPORTED_MODULE_2__.createSidebar)();
+const todoList = (0,_modules_createTodoList_js__WEBPACK_IMPORTED_MODULE_3__.createTodoList)();
 
 mainContainer.appendChild(sidebar);
+mainContainer.appendChild(todoList);
 
 document.body.appendChild(header);
 document.body.appendChild(mainContainer);
