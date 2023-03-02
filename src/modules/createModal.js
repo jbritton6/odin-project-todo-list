@@ -89,6 +89,18 @@ function createRadioInput(labelTitle, identifier, group, value) {
     return container;
 }
 
+function createNewTodoButton(text) {
+    const newTodoButton = document.createElement('button');
+    newTodoButton.setAttribute('type', 'button');
+    newTodoButton.classList.add('new-todo-button');
+    newTodoButton.innerText = text;
+    newTodoButton.addEventListener('click', ()=> {
+        console.log('hi');
+    })
+
+    return newTodoButton;
+}
+
 function createModalForm() {
     const form = document.createElement('form');
 
@@ -97,6 +109,7 @@ function createModalForm() {
     form.appendChild(createTextInput('Project:', 'project'));
     form.appendChild(createDateInput('Due date:', 'due-date'))
     form.appendChild(createPriorityInput());
+    form.appendChild(createNewTodoButton('Create todo'));
 
     return form;
 }

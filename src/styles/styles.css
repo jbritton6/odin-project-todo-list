@@ -38,6 +38,10 @@ body {
     z-index: 1;
 }
 
+.new-todo-button {
+    background-color: yellow;
+}
+
 .header {
     background-color: red;
     display: flex;
