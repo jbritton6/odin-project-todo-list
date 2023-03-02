@@ -15,6 +15,10 @@ body {
     margin-left: auto;
 }
 
+.cancel-button {
+    background-color: purple;
+}
+
 .main-container {
     background-color: blue;
     display: flex;

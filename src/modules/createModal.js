@@ -7,6 +7,19 @@ function createModalBackground() {
     return modalBackground;
 }
 
+function createCancelButton(text) {
+    const cancelButton = document.createElement('button');
+    cancelButton.classList.add('cacel-button');
+    cancelButton.innerText = text;
+    cancelButton.addEventListener('click', () => {
+        document.querySelector('form').reset();
+        const element = document.querySelector('.modal-background');
+        element.classList.toggle('hide-display');
+    });
+
+    return cancelButton;
+}
+
 function createTextInput(labelTitle, identifier) {
     const label = document.createElement('label');
     label.setAttribute('for', identifier);
@@ -79,6 +92,7 @@ function createRadioInput(labelTitle, identifier, group, value) {
 function createModalForm() {
     const form = document.createElement('form');
 
+    form.appendChild(createCancelButton('X'));
     form.appendChild(createTextInput('Title:', 'title'));
     form.appendChild(createTextInput('Project:', 'project'));
     form.appendChild(createDateInput('Due date:', 'due-date'))
