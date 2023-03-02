@@ -3,7 +3,7 @@ import { createMainContainer } from './modules/createMainContainer.js';
 import { createSidebar } from './modules/createSidebar.js';
 import { createTodoList } from './modules/createTodoList.js';
 import { createModal } from './modules/createModal.js';
-import { displayTodos } from './modules/manageLocalStorage.js';
+import { displayTodos, clear } from './modules/manageLocalStorage.js';
 
 const header = createHeader();
 const mainContainer = createMainContainer();
@@ -19,3 +19,4 @@ document.body.appendChild(mainContainer);
 document.body.appendChild(modal);
 
 displayTodos();
+clear();

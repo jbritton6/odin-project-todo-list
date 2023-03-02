@@ -32,7 +32,22 @@ function displayTodos() {
     }
 }
 
+function clear() {
+    arr = [];
+
+    for (let key in localStorage) {
+        if (key.includes('todo')) {
+            arr.push(key);
+        }
+    }
+
+    for (key in arr) {
+        localStorage.removeItem(key);
+    }
+}
+
 export {
     storeTodo,
     displayTodos,
+    clear,
 };
