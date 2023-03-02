@@ -107,14 +107,14 @@ function createNewTodoButton(text) {
     return newTodoButton;
 }
 
-function createNewTodo(title, project, dueDate, priority) {
+function createNewTodo() {
     const todo = document.createElement('div');
     todo.classList.add('todo-element');
     const textContent = document.createTextNode(`
         ${document.querySelector('#title').value}
-        ${project}
-        ${dueDate}
-        ${priority}
+        ${document.querySelector('#project').value}
+        ${document.querySelector('#due-date').value}
+        ${document.querySelector('input[type=radio]:checked').value}
     `);
     todo.appendChild(textContent);
 
