@@ -3,7 +3,9 @@ import { createMainContainer } from './modules/createMainContainer.js';
 import { createSidebar } from './modules/createSidebar.js';
 import { createTodoList } from './modules/createTodoList.js';
 import { createModal } from './modules/createModal.js';
+import { initializeLocalStorage } from './modules/createTodoStorage.js';
 
+initializeLocalStorage();
 
 const header = createHeader();
 const mainContainer = createMainContainer();
