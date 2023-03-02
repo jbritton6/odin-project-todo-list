@@ -9,6 +9,7 @@ function createModalBackground() {
 
 function createCancelButton(text) {
     const cancelButton = document.createElement('button');
+    cancelButton.setAttribute('type', 'button');
     cancelButton.classList.add('cacel-button');
     cancelButton.innerText = text;
     cancelButton.addEventListener('click', () => {
