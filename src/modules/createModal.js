@@ -96,9 +96,8 @@ function createNewTodoButton(text) {
     newTodoButton.classList.add('new-todo-button');
     newTodoButton.innerText = text;
     newTodoButton.addEventListener('click', ()=> {
-        const todo = createNewTodo();
-        const todoList = document.querySelector('.todo-list');
-        todoList.appendChild(todo);
+        createNewTodo();
+        displayTodos();
 
         const element = document.querySelector('.modal-background');
         element.classList.toggle('hide-display');
@@ -108,17 +107,26 @@ function createNewTodoButton(text) {
 }
 
 function createNewTodo() {
-    const todo = document.createElement('div');
-    todo.classList.add('todo-element');
-    const textContent = document.createTextNode(`
-        ${document.querySelector('#title').value}
-        ${document.querySelector('#project').value}
-        ${document.querySelector('#due-date').value}
-        ${document.querySelector('input[type=radio]:checked').value}
-    `);
-    todo.appendChild(textContent);
+    localStorage.setItem(`todo`, JSON.stringify({
+        title: document.querySelector('#title').value,
+        project: document.querySelector('#project').value,
+        dueDate: document.querySelector('#due-date').value,
+        priority: document.querySelector('input[type=radio]:checked').value
+    }));
+}
 
-    return todo;
+function displayTodos() {
+    const todoList = document.querySelector('.todo-list');
+
+    for (let key in localStorage) {
+        if (key.includes('todo')) {
+            const todo = localStorage.getItem(key)
+            const container = document.createElement('div');
+            container.innerText = todo
+
+            todoList.appendChild(container);
+        }
+    }
 }
 
 function createModalForm() {
