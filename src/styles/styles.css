@@ -22,8 +22,11 @@ body {
 }
 
 .modal-background {
-    background-color: rgba(255, 255, 255, 0.3);
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.6);
+    display: flex;
     height: 100vh;
+    justify-content: center;
     left: 0;
     position: fixed;
     top: 0;
@@ -35,6 +38,10 @@ body {
     background-color: red;
     display: flex;
     height: 100px;
+}
+
+.hide-display {
+    visibility: hidden;
 }
 
 .sidebar {

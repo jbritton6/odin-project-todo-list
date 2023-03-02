@@ -91,12 +91,10 @@ function createModal() {
     const modalBackground = createModalBackground();
     const modalForm = createModalForm();
 
-    const modal = document.createElement('div');
-
     modalBackground.appendChild(modalForm);
-    modal.appendChild(modalBackground);
+    modalBackground.classList.add('hide-display');
 
-    return modal;
+    return modalBackground;
 }
 
 export { createModal };
