@@ -96,10 +96,29 @@ function createNewTodoButton(text) {
     newTodoButton.classList.add('new-todo-button');
     newTodoButton.innerText = text;
     newTodoButton.addEventListener('click', ()=> {
-        console.log('hi');
+        const todo = createNewTodo();
+        const todoList = document.querySelector('.todo-list');
+        todoList.appendChild(todo);
+
+        const element = document.querySelector('.modal-background');
+        element.classList.toggle('hide-display');
     })
 
     return newTodoButton;
+}
+
+function createNewTodo(title, project, dueDate, priority) {
+    const todo = document.createElement('div');
+    todo.classList.add('todo-element');
+    const textContent = document.createTextNode(`
+        ${document.querySelector('#title').value}
+        ${project}
+        ${dueDate}
+        ${priority}
+    `);
+    todo.appendChild(textContent);
+
+    return todo;
 }
 
 function createModalForm() {
