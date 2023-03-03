@@ -1,3 +1,5 @@
+import { createTodo } from "./createTodo";
+
 function storeTodo() {
     const title = document.querySelector('#title').value;
     const project = document.querySelector('#project').value;
@@ -15,6 +17,8 @@ function storeTodo() {
         `todo-${(new Date()).getMilliseconds()}`,
         JSON.stringify(todo)
     );
+
+    document.querySelector('form').reset();
 }
 
 function displayTodos() {
@@ -23,17 +27,14 @@ function displayTodos() {
 
     for (let key in localStorage) {
         if (key.includes('todo')) {
-            const todo = localStorage.getItem(key)
-            const container = document.createElement('div');
-            container.innerText = todo
-
-            todoList.appendChild(container);
+            const todo = createTodo(localStorage.getItem(key));
+            todoList.appendChild(todo);
         }
     }
 }
 
 function clear() {
-    arr = [];
+    let arr = [];
 
     for (let key in localStorage) {
         if (key.includes('todo')) {
@@ -41,7 +42,7 @@ function clear() {
         }
     }
 
-    for (key in arr) {
+    for (let key in arr) {
         localStorage.removeItem(key);
     }
 }
