@@ -108,29 +108,6 @@ function createNewTodoButton(text) {
     return newTodoButton;
 }
 
-// function createNewTodo() {
-//     localStorage.setItem(`todo`, JSON.stringify({
-//         title: document.querySelector('#title').value,
-//         project: document.querySelector('#project').value,
-//         dueDate: document.querySelector('#due-date').value,
-//         priority: document.querySelector('input[type=radio]:checked').value
-//     }));
-// }
-
-// function displayTodos() {
-//     const todoList = document.querySelector('.todo-list');
-
-//     for (let key in localStorage) {
-//         if (key.includes('todo')) {
-//             const todo = localStorage.getItem(key)
-//             const container = document.createElement('div');
-//             container.innerText = todo
-
-//             todoList.appendChild(container);
-//         }
-//     }
-// }
-
 function createModalForm() {
     const form = document.createElement('form');
 
