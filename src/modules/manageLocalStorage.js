@@ -35,6 +35,8 @@ function displayTodos() {
 
 function clear() {
     let arr = [];
+    console.log(arr);
+    localStorage.removeItem('todo-408');
 
     for (let key in localStorage) {
         if (key.includes('todo')) {
@@ -42,9 +44,7 @@ function clear() {
         }
     }
 
-    for (let key in arr) {
-        localStorage.removeItem(key);
-    }
+    arr.map(e => localStorage.removeItem(e));
 }
 
 export {
